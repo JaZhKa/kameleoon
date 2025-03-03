@@ -1,0 +1,21 @@
+a {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--main-text-color);
+  text-decoration: none;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+a::before {
+  content: '';
+  background-image: url('./../../assets/backArrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+}

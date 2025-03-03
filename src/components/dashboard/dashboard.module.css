@@ -1,0 +1,93 @@
+.dashboard {
+  font-family: Roboto;
+  padding: 20px;
+  width: 954px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 2.6rem;
+  text-align: start;
+  color: var(--main-text-color);
+  margin-bottom: 4rem;
+}
+
+.input__icon {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('./../../assets/magnifier.svg');
+    float: left;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-repeat: no-repeat;
+    margin: 1.5rem;
+  }
+}
+
+.input__item-count {
+  position: absolute;
+  top: 14px;
+  right: 17px;
+  font-size: 1.4rem;
+  color: var(--placeholder-text);
+}
+
+input {
+  width: 100%;
+  height: 4.5rem;
+  padding: 0 0 0 4.5rem;
+  border: 1px solid #ebebeb;
+  border-radius: 15px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--main-text-color);
+  margin-bottom: 3rem;
+
+  &::placeholder {
+    color: var(--placeholder-text);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-text {
+  font-family: Montserrat;
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin: 15rem 0 4rem 0;
+}
+
+.loading {
+  display: flex;
+  font-size: 1.8rem;
+  font-family: Montserrat;
+  color: var(--main-text-color);
+  font-weight: 500;
+  margin: 15rem 0 4rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  font-family: Montserrat;
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin: 15rem 0 4rem 0;
+}

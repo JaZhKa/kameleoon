@@ -1,0 +1,106 @@
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+table th,
+table td,
+table strong {
+  text-align: left;
+  border: 1px solid #ddd;
+  border: none;
+  font-size: 1.2rem;
+  margin-left: 11px;
+}
+
+table th {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--third-text-color);
+  padding-bottom: 10px;
+}
+
+table tbody tr {
+  border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+
+th {
+  cursor: pointer;
+  position: relative;
+}
+
+.table__head-name-desc::after,
+.table__head-type-desc::after,
+.table__head-status-desc::after,
+.table__head-site-desc::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -200%);
+  background-image: url('../../assets/sortArrow.svg');
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 4px;
+}
+
+.table__head-name-asc::after,
+.table__head-type-asc::after,
+.table__head-status-asc::after,
+.table__head-site-asc::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  background-image: url('../../assets/sortArrow.svg');
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 4px;
+  transform: translate(25%, -200%) rotate(180deg);
+}
+
+.table__body-color {
+  width: 4px;
+  height: 70px;
+  background-color: #f2213e;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.table__body-name {
+  color: var(--main-text-color);
+  width: 42.5rem;
+
+  strong {
+    font-size: 1.3rem;
+  }
+}
+
+.table__body-type,
+.table__body-site {
+  color: var(--second-text-color);
+}
+
+.table__body-status-ONLINE {
+  color: var(--status-text-online);
+}
+
+.table__body-status-PAUSED {
+  color: var(--status-text-paused);
+}
+
+.table__body-status-STOPPED {
+  color: var(--status-text-stopped);
+}
+
+.table__body-status-DRAFT {
+  color: var(--second-text-color);
+}
+
+.table__body-button {
+  width: 10.5rem;
+}
