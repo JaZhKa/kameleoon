@@ -1,0 +1,10 @@
+.loading {
+  display: flex;
+  font-size: 1.8rem;
+  font-family: Montserrat;
+  color: var(--main-text-color);
+  font-weight: 500;
+  margin: 15rem 0 4rem 0;
+  justify-content: center;
+  align-items: center;
+}

@@ -4,6 +4,7 @@ import TestsList from '../testsList';
 import { ITest, IData } from '../../types/dataTypes';
 import Button from '../button';
 import useSort from '../../hooks/useSort';
+import Loader from '../loader';
 import styles from './dashboard.module.css';
 
 const Dashboard = () => {
@@ -30,7 +31,6 @@ const Dashboard = () => {
     setSearchTerm(event.target.value);
   };
 
-  if (loading) return <div className={styles['loading']}>Loading...</div>;
   if (error) return <div className={styles['error']}>Error: {error}</div>;
 
   return (
@@ -47,7 +47,10 @@ const Dashboard = () => {
           {filteredTests.length} items
         </div>
       </div>
-      {data &&
+      {loading ? (
+        <Loader />
+      ) : (
+        data &&
         (filteredTests.length > 0 ? (
           <TestsList
             filteredTests={sortedData.filter((item) =>
@@ -64,7 +67,8 @@ const Dashboard = () => {
             </div>
             <Button callback={() => setSearchTerm('')}>Reset</Button>
           </div>
-        ))}
+        ))
+      )}
     </div>
   );
 };
